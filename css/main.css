@@ -1047,6 +1047,7 @@ fieldset {
   width: 220px;
 }
 .about {
+  position: relative;
   padding-top: 79px; 
   padding-bottom: 85px;
 }
@@ -1088,8 +1089,35 @@ fieldset {
   height: 2px;
   background-color: #fb565a;
 }
-.map {
+.map-small {
   margin: 33px 0;
+}
+.map {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  width: 940px;
+  height: 500px;
+  background-color: white;
+  background: url(../img/map-big.jpg) no-repeat;
+  box-shadow: 0 0 16px rgba(35,31,32,0.5);
+  z-index: 100;
+}
+.map-close {
+  position: absolute;
+  top: 0px;
+  right: -40px;
+  width: 21px;
+  height: 21px;
+  background: url("../img/icon-exit.png") no-repeat;
+  cursor: pointer;
+}
+.map-show {
+  display: block;
 }
 .about-column-right .btn-long {
   width: 100%;
@@ -1243,7 +1271,7 @@ fieldset {
   width: 620px;
   border-top: 7px solid #ee3643;
   background-color: #ffffff;
-  box-shadow: 0 20px 40px rgba(0,1,1,.75);
+  box-shadow: 0 20px 40px rgba(0,1,1,0.75);
   z-index: 100;
 }
 
@@ -1317,6 +1345,7 @@ fieldset {
   width: 21px;
   height: 21px;
   cursor: pointer;
+  background: url("../img/icon-exit.png") no-repeat;
 }
 .write-us-close:before {
   content: "";
@@ -1398,7 +1427,7 @@ fieldset {
   background: url('../pic/icon-ok.png') no-repeat 80px 50%;
 }
 .in-basket-show { 
-  display: none; 
+  display: block; 
 }
 .inner-page .item-card:nth-child(3n){
   margin-right: 0;

@@ -262,12 +262,34 @@
             </div>
             <p>Вы можете забрать товар сами<br>
             заехав в наш офис:</p>
-            <div id="map-small" class="map">
-              <a href="popup-map.html">
-                <img class="map-img" src="pic/map.jpg" height="158" width="300" alt="Карта"></a>
+            <div id="map-small" class="map-small">
+              <a class="map-open" href="popup-map.html">
+                <img class="map-img" src="pic/map.jpg" height="158" width="300" alt="Карта">
+              </a>
             </div>
-            <a href="popup-mail.html" id="open-form" class="btn btn-long">Заблудились? Напишите нам!</a>
+            <a id="write-us-open" class="btn btn-long write-us-open" href="write-us.html" >Заблудились? Напишите нам!</a>
           </div>
+          <form class="write-us" action="/echo" method="post">
+            <div class="write-us-close "></div>
+            <div class="write-us-container">
+              <fieldset class="half-width">
+                <label for="user-name">Ваше имя:</label>
+                <input id="user-name" name="user-name" type="text" placeholder="Представьтесь, пожалуйста" required="">
+              </fieldset>
+              <fieldset class="half-width">
+                <label for="user-email">Ваш e-mail:</label>
+                <input id="user-email" name="user-email" type="email" placeholder="Для отправки ответа" required="">
+              </fieldset>
+              <fieldset>
+                <label for="user-text">Текст письма:</label>
+                <textarea id="user-text" name="user-text" rows="4" cols="30" placeholder="В свободной форме" required=""></textarea>
+              </fieldset>
+            </div>
+            <div class="write-us-buttons clearfix">
+              <button class="btn btn-long btn-red" type="submit" value="Отправить">Отправить</button>
+              <button class="btn btn-long btn-white" name="reset" type="reset" value="Отмена">Отмена</button>
+            </div>
+          </form>
         </div>
       </section>
     </div>
@@ -324,38 +346,22 @@
       </div>
     </div>
   </footer>
-  <form class="write-us" action="/echo" method="post">
-    <div class="write-us-close"></div>
-    <div class="write-us-container">
-      <fieldset class="half-width">
-        <label for="user-name">Ваше имя:</label>
-        <input id="user-name" name="user-name" type="text" placeholder="Представьтесь, пожалуйста" required="">
-      </fieldset>
-      <fieldset class="half-width">
-        <label for="user-email">Ваш e-mail:</label>
-        <input id="user-email" name="user-email" type="email" placeholder="Для отправки ответа" required="">
-      </fieldset>
-      <fieldset>
-        <label for="user-text">Текст письма:</label>
-        <textarea id="user-text" name="user-text" rows="4" cols="30" placeholder="В свободной форме" required=""></textarea>
-      </fieldset>
-    </div>
-    <div class="write-us-buttons clearfix">
-      <button class="btn btn-long btn-red" type="submit" value="Отправить">Отправить</button>
-      <button class="btn btn-long btn-white" name="reset" type="reset" value="Отмена">Отмена</button>
-    </div>
-  </form>
-  <div class="item-in-basket in-basket-show">
+  <div class="item-in-basket">
     <div class="close"></div>
     <p class="in-basket-text">
       Товар добавлен в корзину!
     </p>
     <div class="in-basket-btns clearfix">
       <a class="btn btn-long btn-red" href="#">Оформить заказ</a>
-      <a class="btn btn-long btn-white continue" href="#">Продолжить покупки</a>
+      <a class="btn btn-long btn-white btn-continue" href="#">Продолжить покупки</a>
     </div>
   </div>
-  <script src=""></script>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4490.594856814472!2d37.62109540741325!3d55.75333528857432!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506b52311f!2z0JrRgNCw0YHQvdCw0Y8g0J_Qu9C-0YnQsNC00Yw!5e0!3m2!1sru!2sru!4v1430162931211" width="940" height="500" style="border:0">
+    </iframe>
+    <div class="map-close"></div>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
 
